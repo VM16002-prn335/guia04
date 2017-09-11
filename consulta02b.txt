@@ -1,0 +1,4 @@
+SELECT r.nombre, COUNT(r) as cat 
+FROM Post p JOIN p.idCategoria r 
+GROUP BY r
+ORDER BY cat DESC

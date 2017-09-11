@@ -1,0 +1,4 @@
+SELECT p.nombre, COUNT(p) as cuenta 
+FROM TipoPostSeccion t JOIN t.seccion p 
+GROUP BY t.seccion 
+ORDER BY cuenta DESC
