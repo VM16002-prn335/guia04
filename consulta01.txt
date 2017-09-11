@@ -1,3 +1,0 @@
-SELECT DISTINCT u.nombres, jp.titulo, jp.fecha
-FROM Usuario u, PostPaso p JOIN p.post jp 
-WHERE u.idUsuario = p.idUsuario 
