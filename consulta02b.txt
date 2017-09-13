@@ -1,4 +1,6 @@
-SELECT r.nombre, COUNT(r) as cat 
+SELECT r.idCategoria, r.nombre, COUNT(r) as cat 
 FROM Post p JOIN p.idCategoria r 
 GROUP BY r
-ORDER BY cat DESC
+HAVING ( COUNT(r) >= ALL(SELECT COUNT(p.idCategoria) 
+FROM Post p 
+GROUP BY p.idCategoria))
